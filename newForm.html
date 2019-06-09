@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <form action="">
-            <div class="row">
+            <div class="row form-group">
                 <label for="radio" class="col-3">Fruits</label>
                 <div class="col-9">
                     <div class="form-check">
@@ -29,7 +29,107 @@
                     </div>
                 </div>
             </div>
+            <div class="row form-group">
+                <label for="first_name" class="col-3 col-form-label-sm">First Name</label>
+                <input type="text" name="first_name" id="first_name" class="form-control-sm col-9">
+            </div>
+            <div class="row form-group">
+                <label for="last_name" class="col-3 col-form-label">Last Name</label>
+                <input type="text" name="last_name" id="last_name" class="form-control col-8">
+            </div>
+            <div class="row form-group">
+                <label for="account_id" class="col-3 col-form-label">Account Id</label>
+                <span class="form-control-plaintext col-9">10001</span>
+                <!-- <input type="text" name="account_id" id="account_id" class="form-control-lg col-7" aria-describedby="helpAccountId">
+                <span id="helpAccountId" class="offset-3 form-text text-muted">Your Account Id is the serial number assigned to you when you first registered here.</span> -->
+            </div>
+            <div>
+                <div class="form-check form-check-inline"><input type="checkbox" name="inlineCheck" id="check1" class="form-check-input">
+                <label for="check1" class="form-check-label">1</label>
+                </div>
+                <div class="form-check form-check-inline"><input type="checkbox" name="inlineCheck" id="check2" class="form-check-input">2</div>
+                <div class="form-check form-check-inline"><input type="checkbox" name="inlineCheck" id="check3" class="form-check-input">3</div>
+                <div class="form-check form-check-inline"><input type="radio" name="inlineRadio" id="radio1" class="form-check-input">1</div>
+                <div class="form-check form-check-inline"><input type="radio" name="inlineRadio" id="radio2" class="form-check-input">2</div>
+                <div class="form-check form-check-inline"><input type="radio" name="inlineRadio" id="radio3" class="form-check-input">3</div>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="customCheck" id="customCheck" class="custom-control-input">
+                <label for="customCheck" class="custom-control-label">ABC</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" name="customRadio" id="customRadio1" class="custom-control-input">
+                <label for="customRadio1" class="custom-control-label">X</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" name="customRadio" id="customRadio2" class="custom-control-input">
+                <label for="customRadio2" class="custom-control-label">Y</label>
+            </div>
+            <select class="custom-select form-group">
+                <option selected>Choose one..</option>
+                <option value="1">Shoes</option>
+                <option value="2">Boots</option>
+                <option value="3">Nothing</option>
+            </select>
+            <div class="custom-file mb-5">
+                <input type="file" name="customFile" id="customFile" class="custom-file-input">
+                <label for="customFile" class="custom-file-label">Choose File</label>
+            </div>
+            <div>
+                <button class="btn btn-primary btn-sm" disabled="disabled">Primary</button>
+                <input type="button" value="Primary" class="btn btn-primary" disabled="disabled">
+                <a href="#" role="button" class="btn btn-primary btn-lg disabled">Primary</a>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-info">Info</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-warning">Warning</button>
+                <button class="btn btn-danger">Danger</button>
+                <button class="btn btn-light">Light</button>
+                <button class="btn btn-dark">Dark</button>
+                <button class="btn btn-link">Link</button>
+            </div>
+            <div class="mt-2">
+                <button class="btn btn-outline-primary">Primary</button>
+                <button class="btn btn-outline-secondary">Secondary</button>
+                <button class="btn btn-outline-info">Info</button>
+                <button class="btn btn-outline-success">Success</button>
+                <button class="btn btn-outline-warning">Warning</button>
+                <button class="btn btn-outline-danger">Danger</button>
+                <button class="btn btn-outline-light">Light</button>
+                <button class="btn btn-outline-dark">Dark</button>
+                <button class="btn btn-link">Link</button>
+            </div>
+            <button class="btn btn-danger btn-block mt-2 mb-2">Block level button</button>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="checkbox" name="options" id="option1">
+                    Boots
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" name="options" id="option2">
+                    Shoes
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" name="options" id="option3">
+                    Nothing
+                </label>
+            </div>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <labels class="btn btn-primary"><input type="radio" name="radioOptions" id="radioOption1">Boots</labels>
+                <labels class="btn btn-primary"><input type="radio" name="radioOptions" id="radioOption2">Shoes</labels>
+                <labels class="btn btn-primary"><input type="radio" name="radioOptions" id="radioOption3">Nothing</labels>
+            </div>
+            <!-- form-control-sm and form-control-lg are used by bootstrap instead of input-sm and input-lg 
+            form-text is used by v4.0 but v3.0 uses help-block
+            form-control-plaintext in v4 but form-control-static in v3
+            4 -> form-check, form-check-inline, form-check-input
+            3 -> radio, radio-inline, checkbox, checkbox-inline
+            btn-secondary, btn-light, btn-dark are new v4 and btn-default has been dropped
+            -->
         </form>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

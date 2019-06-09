@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            /* padding-top: 10em; */
+            padding-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link">HTML</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">CSS</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">JavaScript</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">jQuery</a></li>
+        </ul> -->
+        <!-- <nav class="nav flex-column">
+            <a href="#" class="nav-link">HTML</a>
+            <a href="#" class="nav-link">CSS</a>
+            <a href="#" class="nav-link">JavaScript</a>
+            <a href="#" class="nav-link">jQuery</a>
+        </nav> -->
+        <!-- <ul class="nav nav-tabs">
+            <li class="nav-item"><a href="#" class="nav-link active">HTML</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">CSS</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">JavaScript</a></li>
+            <li class="nav-item"><a href="#" class="nav-link disabled">jQuery</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Preview</a>
+                <div class="dropdown-menu" aria-labelledby="Preview">
+                    <a href="#" class="dropdown-item">Mobile</a>
+                    <a href="#" class="dropdown-item">Tablet</a>
+                    <a href="#" class="dropdown-item">Laptop</a>
+                </div>
+            </li>
+        </ul> -->
+        <ul id="clothing-nav" class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+                <a href="#home" class="nav-link active" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#hats" class="nav-link" id="hats-tab" role="tab" data-toggle="tab" aria-controls="hats" aria-expanded="false">Hats</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Footwear</a>
+                <div class="dropdown-menu">
+                    <a href="#dropdown-shoes" class="dropdown-item" role="tab" id="dropdown-shoes-tab" data-toggle="tab">Shoes</a>
+                    <a href="#dropdown-boots" class="dropdown-item" role="tab" id="dropdown-boots-tab" data-toggle="tab">Boots</a>
+                </div>
+            </li>
+        </ul>
+        <div id='clothing-nav-content' class="tab-content">
+            <div role="tabpanel" class="tab-pane show active fade" id="home" aria-labelledby="home-tab">
+                <p class="mt-2">Welcome to homepage! Click on any tab to see the content for them</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="hats" aria-labelledby="hats-tab">
+                <p class="mt-2">Hat is for covering your head.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="dropdown-shoes" aria-labelledby="dropdown-shoes-tab">
+                <p class="mt-2">Shoes are for comfort of human feet.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="dropdown-boots" aria-labelledby="dropdown-boots-tab">
+                <p class="mt-2">Boots is a specific type of shoes</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
