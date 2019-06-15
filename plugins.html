@@ -8,6 +8,103 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <a href="page.html" class="first">This is an anchor tag</a>
+    <a href="page.html" class="second">This is an anchor tag</a>
+    <a href="page.html" class="third">This is an anchor tag</a>
+    <a href="page.html" class="fourth">This is an anchor tag</a>
+    <script>
+        //$.fn
+        // $('a').css('color', 'red')
+        // (function( $ ){
+        //     var shade = '#556b2f';
+        //     $.fn.greenify = function(){
+        //     this.css('color', shade);
+        //     return this;
+        //     }
+        // }( jQuery ))
+        // $('a').greenify().addClass('greenified');
+        // jQuery('a').greenify();
+        // $('a').click().addClass().css()
+        // jQuery.noConflict()
+        // (function($){
+        //     $.fn.openPopup = function(){
+        //         //Open popup code
+        //     }
+        //     $.fn.closePopup = function(){
+        //         //Close popup code
+        //     }
+        // }(jQuery))
+        // (function($){
+        //     $.fn.popup = function(action){
+        //         if(action == 'open'){
+        //             //Open popup code
+        //         }
+        //         if(action == 'close'){
+        //             //Close popup code
+        //         }
+        //     }
+        // }(jQuery))
+        // $.fn.myNewPlugin = function(){
+        //     return this.each(function(){
+        //         //Do something to each element
+        //     })
+        // }
+        //immediately invoked function expression
+        // (function($){
+        //     $.fn.greenify = function(options){
+        //         var settings = $.extend({
+        //             color: '#556b2f',
+        //             backgroundColor: 'white'
+        //         }, options)
+        //         return this.css({
+        //             color: settings.color,
+        //             backgroundColor: settings.backgroundColor
+        //         })
+        //     }
+        // }(jQuery))
+        // $('a').greenify({
+        //     color: 'yellow',
+        //     backgroundColor: 'black'
+        // })
+        // // (function($){
+        // //     $.fn.showLinkLocation = function(){
+        // //         this.filter('a').each(function(){
+        // //             var link = $(this);
+        // //             link.append(" (" + link.attr('href') + ") ")
+        // //         })
+        // //         return this;
+        // //     }
+        // // }(jQuery))
+        // (function($){
+        //     $.fn.showLinkLocation = function(){
+        //         this.filter('a').append(function(){
+        //             return " (" + this.href +") "
+        //         })
+        //         return this;
+        //     }
+        // }(jQuery))
+        // $('a').showLinkLocation();
+        $.fn.hilight = function(options){
+            var settings = $.extend({}, $.fn.hilight.defaults, options)
+            return this.css({
+                color: settings.color,
+                backgroundColor: settings.backgroundColor
+            })
+        }
+        $.fn.hilight.defaults = {
+            color: 'red',
+            backgroundColor: 'yellow'
+        }
+        $('.first').hilight()
+        $.fn.hilight.defaults = {
+            color: 'yellow',
+            backgroundColor: 'red'
+        }
+        $('.second').hilight()
+        $('.third').hilight()
+        $('.fourth').hilight({
+            backgroundColor: 'black'
+        })
+    </script>
 </body>
 </html>
