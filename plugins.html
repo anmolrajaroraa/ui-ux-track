@@ -12,6 +12,7 @@
     <a href="page.html" class="second">This is an anchor tag</a>
     <a href="page.html" class="third">This is an anchor tag</a>
     <a href="page.html" class="fourth">This is an anchor tag</a>
+    <a href="page.html" class="fifth">This is an anchor tag</a>
     <script>
         //$.fn
         // $('a').css('color', 'red')
@@ -49,7 +50,7 @@
         //         //Do something to each element
         //     })
         // }
-        //immediately invoked function expression
+        //immediately invoked function expression - closure
         // (function($){
         //     $.fn.greenify = function(options){
         //         var settings = $.extend({
@@ -84,26 +85,104 @@
         //     }
         // }(jQuery))
         // $('a').showLinkLocation();
-        $.fn.hilight = function(options){
-            var settings = $.extend({}, $.fn.hilight.defaults, options)
-            return this.css({
-                color: settings.color,
-                backgroundColor: settings.backgroundColor
-            })
-        }
-        $.fn.hilight.defaults = {
+        // $.fn.hilight = function(options){
+        //     var settings = $.extend({}, $.fn.hilight.defaults, options)
+        //     return this.css({
+        //         color: settings.color,
+        //         backgroundColor: settings.backgroundColor
+        //     })
+        // }
+        // $.fn.hilight.defaults = {
+        //     color: 'red',
+        //     backgroundColor: 'yellow'
+        // }
+        // $('.first').hilight()
+        // $.fn.hilight.defaults = {
+        //     color: 'orange',
+        //     backgroundColor: 'white'
+        // }
+        // $('.second').hilight()
+        // $('.third').hilight()
+        // $('.fourth').hilight({
+        //     backgroundColor: 'black'
+        // })
+        // $('.fifth').hilight()
+        // (function($){
+        //     $.fn.hilight = function(options){
+        //         debug(this);
+        //         return this.each(function(){
+        //             var elem = $(this);
+        //             var text = elem.html();
+        //             text = $.fn.hilight.format(text);
+        //             elem.html(text);
+        //         })
+        //     }
+        //     function debug(obj){
+        //         console.log('hilight selection count: ' + obj.length)
+        //     }
+        // }(jQuery))
+        // $.fn.hilight.format = function(text){
+        //     return "<strong>" + text + "</strong>"
+        // }
+        // $('a').hilight()
+        // jQuery.fn.superGallery = function(options){
+        //     var delayDuration = 0;
+        //     var defaults = {
+        //         textColor: '#000',
+        //         backgroundColor: '#fff',
+        //         fontsize: '1em',
+        //         delay: 'quite long', 
+        //         animateWidth: true,
+        //         animateOpacity: true,
+        //         animationDuration: '500',
+        //         nextButtonText: 'next',
+        //         previousButttonText: 'previous',
+        //         buttonTextColor = 'red'
+        //     }
+        //     switch(defaults.delay){
+        //         case "very short":
+        //             delayDuration = 100;
+        //             break;
+
+        //         case "quite short":
+        //             delayDuration = 200;
+        //             break;
+
+        //         case "quite long":
+        //             delayDuration = 300;
+        //             break;
+
+        //         case "very long":
+        //             delayDuration = 400;
+        //             break;
+
+        //         default:
+        //             delayDuration = 200;
+        //     }
+        //     var settings = $.extend({}, defaults, options);
+        //     return this.each(function(){
+
+        //     });
+        // }
+        // $("<div class='gallery-wrapper'></div>").appendTo('body')
+        // $('.gallery-wrapper').append('...');
+        var wrapper = $('<div></div>').attr(settings.wrapperAttrs).appendTo(settings.container)
+        wrapper.append('...');
+        var defaults = {
+            wrapperAttrs: {
+                class: 'gallery-wrapper',
+                id: 'wrapper'
+            },
             color: 'red',
-            backgroundColor: 'yellow'
+            backgroundColor: 'white'
         }
-        $('.first').hilight()
-        $.fn.hilight.defaults = {
-            color: 'yellow',
-            backgroundColor: 'red'
-        }
-        $('.second').hilight()
-        $('.third').hilight()
-        $('.fourth').hilight({
-            backgroundColor: 'black'
+        var settings = $.extend(true, {}, defaults, options);
+        $.fn.hilight({
+            color: 'orange',
+            backgroundColor: 'black', 
+            wrapperAttrs: {
+                id: 'galleryWrapper'
+            }
         })
     </script>
 </body>
